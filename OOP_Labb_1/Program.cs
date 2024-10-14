@@ -10,6 +10,8 @@ namespace OOP_Labb_1
             // One with value 5 and other with value 6
             Circle circle1 = new Circle(5);
             Circle circle2 = new Circle(6);
+            // New object instanication of class triangle
+            // passing along the value 5 and 7
             Triangle triangle = new Triangle(5, 7);
             // Call the methods through object and store to float variables
             float area1 = circle1.GetArea();
@@ -21,6 +23,7 @@ namespace OOP_Labb_1
             float areaSphere1 = circle1.GetAreaSphere();
             float areaSphere2 = circle2.GetAreaSphere();
             float triangleArea = triangle.GetArea();
+            // Except this one is double
             double triangleHypo = triangle.GetHypoRight();
             // print out the results
             Console.WriteLine("Olika beräkningar av en cirkel med radie 5.");
@@ -79,20 +82,24 @@ namespace OOP_Labb_1
 
         }
     }
-    // 
+    // new class triangle
     class Triangle
     {
+        // instanciate new variables
         public int _CathethusA;
         public int _CathethusB;
+        // Constructor to store values in the class
         public Triangle(int cathethusA, int cathethusB)
         {
             _CathethusA = cathethusA;
             _CathethusB = cathethusB;
         }
+        // method to calculate are
         public float GetArea()
         {
             return (_CathethusA * _CathethusB) / 2;
         }
+        // method to calculate the length of the hypotenuse
         public double GetHypoRight()
         {
             return Math.Sqrt(Math.Pow(_CathethusA, 2) + Math.Pow(_CathethusB, 2));
